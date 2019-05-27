@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { WeatherService } from "../../services/weather.service";
 
+import { regions } from "../../map-regions/regions"; //???
+
 @Component({
   selector: "weather-map",
   templateUrl: "./weather-map.component.html",
@@ -19,5 +21,9 @@ export class WeatherMapComponent implements OnInit {
     let clouds = forecast.getElementsByTagName("clouds")[0].getAttribute("name");
 
     console.log(city + "   " + temp + "   " + clouds);
+  }
+
+  private async getForecastList(): Promise<any> {
+    return null;
   }
 }
