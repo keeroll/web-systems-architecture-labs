@@ -1,6 +1,6 @@
-export class ForecastModel {
-    city: string;
-    currentTemperature: number;
-    clouds: string;
-    mapLabel: string;
+export class Forecast {
+    City: string;
+    CurrentTemperature: number;
+    Clouds: string;
+    MapLabel: string;
 }

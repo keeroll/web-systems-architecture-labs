@@ -1,6 +1,9 @@
 import { Component, OnInit } from "@angular/core";
 import { WeatherService } from "../../services/weather.service";
-import { ForecastModel } from 'src/app/models/forecast.model';
+
+import { Forecast } from "../../models/forecast.model";
+import { City } from "../../models/city.model";
+
 import { ukraineMainCities } from "../../mock-data/ukraine-main-cities";
 
 @Component({
@@ -10,35 +13,31 @@ import { ukraineMainCities } from "../../mock-data/ukraine-main-cities";
 })
 export class WeatherMapComponent implements OnInit {
 
-  private _citiesMock: string[] = ukraineMainCities;
-  private _forecastList: ForecastModel[] = [];
+  private _citiesMock: City[] = ukraineMainCities;
+  private _forecastList: Forecast[] = [];
 
   constructor(private _weatherService: WeatherService) { 
 
   }
 
-  get forecastList(): ForecastModel[] {
+  get forecastList(): Forecast[] {
     return this._forecastList;
   }
 
-  set forecastList(value: ForecastModel[]) {
-    this._forecastList = value;
-  }
-
   async ngOnInit() {
-    this.forecastList = await this.getForecastList();
+    this._forecastList = await this.getForecastList();
   }
 
-  private async getForecastList(): Promise<ForecastModel[]> {
-    const forecastList: ForecastModel[] = [];
+  private async getForecastList(): Promise<Forecast[]> {
+    const forecastList: Forecast[] = [];
 
     this._citiesMock.forEach(async item => {
-      let forecast = await this._weatherService.getWeatherByCityAsync(item);
-      let forecastModel = new ForecastModel();
-      forecastModel.city = forecast.getElementsByTagName("city")[0].getAttribute("name");
-      forecastModel.currentTemperature = forecast.getElementsByTagName("temperature")[0].getAttribute("value");
-      forecastModel.clouds = forecast.getElementsByTagName("clouds")[0].getAttribute("name");
-      //forecastModel.mapLabel = item.maplabel;
+      let forecast = await this._weatherService.getWeatherByCityAsync(item.Name);
+      let forecastModel = new Forecast();
+      forecastModel.City = forecast.getElementsByTagName("city")[0].getAttribute("name");
+      forecastModel.CurrentTemperature = forecast.getElementsByTagName("temperature")[0].getAttribute("value");
+      forecastModel.Clouds = forecast.getElementsByTagName("clouds")[0].getAttribute("name");
+      forecastModel.MapLabel = item.MapLabel;
 
       forecastList.push(forecastModel);
     });
