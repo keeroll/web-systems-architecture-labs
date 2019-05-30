@@ -24,8 +24,12 @@ export class WeatherMapComponent implements OnInit {
     return this._forecastList;
   }
 
+  set forecastList(forecastList: Forecast[]) {
+    this._forecastList = forecastList;
+  }
+
   async ngOnInit() {
-    this._forecastList = await this.getForecastList();
+    this.forecastList = await this.getForecastList();
   }
 
   private async getForecastList(): Promise<Forecast[]> {
@@ -37,7 +41,9 @@ export class WeatherMapComponent implements OnInit {
       forecastModel.City = forecast.getElementsByTagName("city")[0].getAttribute("name");
       forecastModel.CurrentTemperature = forecast.getElementsByTagName("temperature")[0].getAttribute("value");
       forecastModel.Clouds = forecast.getElementsByTagName("clouds")[0].getAttribute("name");
-      forecastModel.MapLabel = item.MapLabel;
+      forecastModel.PositionX = item.PositionX;
+      forecastModel.PositionY = item.PositionY;
+      forecastModel.PathCoordinates = item.PathCoordinates;
 
       forecastList.push(forecastModel);
     });

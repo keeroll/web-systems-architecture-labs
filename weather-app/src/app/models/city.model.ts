@@ -1,4 +1,6 @@
 export class City {
-    MapLabel: string;
+    PositionX: Number;
+    PositionY: Number;
     Name: string;
+    PathCoordinates: string;
 }
