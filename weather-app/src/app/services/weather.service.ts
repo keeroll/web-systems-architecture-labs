@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
-import { environment } from "../../environments/environment";
+import { OpenWeatherApi } from "../_static/Constants";
 
 @Injectable({
   providedIn: "root"
@@ -12,11 +12,12 @@ export class WeatherService {
   }
 
   public async getWeatherByCityAsync(cityName: string): Promise<any> {
-    const appId = "&appid=130e03d85d02be51d92d93646895340b";
-    const xmlMode = "&mode=xml";
-    const metricUnits = "&units=metric";
-    const countryCode = ",UA";
-    const url = environment.weatherApiUrl + cityName + countryCode + appId + xmlMode + metricUnits;
+    const url = OpenWeatherApi.Url + 
+                cityName + 
+                OpenWeatherApi.UaCountryCode + 
+                OpenWeatherApi.Key + 
+                OpenWeatherApi.XmlResponse + 
+                OpenWeatherApi.CelciusUnits;
 
     let xmlString =  await this._http.get(url, {responseType: "text"}).toPromise();
     return this.convertToXml(xmlString);

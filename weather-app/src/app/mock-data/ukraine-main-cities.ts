@@ -3,7 +3,9 @@ import { City } from "../models/city.model";
 export const ukraineMainCities: City[] = [
     {
         PositionX: 440,
-        PositionY: 180,
+        PositionY: 160,
+        TemperaturePostitionX: 440,
+        TemperaturePostitionY: 180,
         Name: "Kyiv",
         PathCoordinates: "M395.605,97.544"
         + "c-0.753,1.661-1.785,3.939-1.785,8.512c0,1.291-0.024,2.25-0.042,2.954c-0.049,1.998-0.049,1.998,0.678,2.199"
@@ -52,6 +54,8 @@ export const ukraineMainCities: City[] = [
     { 
         PositionX: 320,
         PositionY: 140,
+        TemperaturePostitionX: 330,
+        TemperaturePostitionY: 160,
         Name: "Zhytomyr", 
         PathCoordinates: "M410.782,202.024"
         + "c-2.711-2.711-1.616-4.777-0.459-6.965c0.147-0.279,0.297-0.561,0.443-0.851c1.193-2.387-0.279-6.134-1.705-8.035"
@@ -100,7 +104,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 250,
-        PositionY: 100, 
+        PositionY: 100,
+        TemperaturePostitionX: 235,
+        TemperaturePostitionY: 130,
         Name: "Rivne", 
         PathCoordinates: "M222.509,50.475"
         + "c-0.055,3.119-0.094,5.376-2.103,8.533c-0.5,0.786-0.985,1.492-1.448,2.174c-2.291,3.354-3.805,5.571-2.392,10.162"
@@ -147,8 +153,10 @@ export const ukraineMainCities: City[] = [
         + "c-1.21,0.404-4.696-1.093-6.887-1.267C222.558,47.777,222.531,49.195,222.509,50.475z" 
     },
     { 
-        PositionX: 150,
-        PositionY: 110, 
+        PositionX: 160,
+        PositionY: 80,
+        TemperaturePostitionX: 165,
+        TemperaturePostitionY: 100,
         Name: "Lutsk", 
         PathCoordinates: "M121.282,87.379"
         + "c0.75,0,1.285,0.643,1.606,1.285c0.321,0.643,0.643,2.676,0.858,2.997c0.215,0.321,0.429,0.857,0.106,1.499"
@@ -196,7 +204,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 100,
-        PositionY: 190, 
+        PositionY: 190,
+        TemperaturePostitionX: 100,
+        TemperaturePostitionY: 210,
         Name: "Lviv", 
         PathCoordinates: "M57.166,247.506"
         + "c1.82,1.073,3.211,2.889,3.745,3.315c0.535,0.431,0.75,0.965,1.071,1.179c0.269,0.18,0.608,1.177,0.653,2.124"
@@ -241,8 +251,10 @@ export const ukraineMainCities: City[] = [
         + "c-0.856,0.21-2.354,0.643-2.462,2.139C55.238,246.221,55.346,246.437,57.166,247.506z" 
     },
     { 
-        PositionX: 45,
-        PositionY: 290, 
+        PositionX: 40,
+        PositionY: 290,
+        TemperaturePostitionX: 65,
+        TemperaturePostitionY: 310,
         Name: "Uzhhorod", 
         PathCoordinates: "M23.984,300.383"
         + "c1.712-0.32,2.25-0.429,2.889-0.32c0.643,0.106,2.999,0.748,1.926,1.82c-1.071,1.073-1.179,2.999,0,2.892"
@@ -284,8 +296,10 @@ export const ukraineMainCities: City[] = [
         + "C23.342,298.35,22.27,300.704,23.984,300.383z" 
     },
     { 
-        PositionX: 110,
-        PositionY: 270, 
+        PositionX: 105,
+        PositionY: 270,
+        TemperaturePostitionX: 140,
+        TemperaturePostitionY: 290,
         Name: "Ivano-Frankivsk", 
         PathCoordinates: "M147.397,351.118"
         + "c1.285,0.857,1.071,1.285,0.856,2.138c-0.212,0.857-0.429,1.926,1.712,3.213c0.461,0.273,0.951,0.537,1.444,0.796h0.949"
@@ -321,7 +335,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 180,
-        PositionY: 325, 
+        PositionY: 320,
+        TemperaturePostitionX: 175,
+        TemperaturePostitionY: 335,
         Name: "Chernivtsi", 
         PathCoordinates: "M259.571,322.646"
         + "c2.139,0,4.709-0.429,5.994,0.216c1.285,0.643,3.641,1.71,4.924,1.924c1.285,0.214,2.782-0.429,2.782-1.071"
@@ -353,8 +369,10 @@ export const ukraineMainCities: City[] = [
         + "C259.786,325.216,257.43,322.646,259.571,322.646z" 
     },
     { 
-        PositionX: 165,
-        PositionY: 225, 
+        PositionX: 175,
+        PositionY: 220,
+        TemperaturePostitionX: 180,
+        TemperaturePostitionY: 240,
         Name: "Ternopil", 
         PathCoordinates: "M203.664,184.919"
         + "c-1.954,0.836-4.655,3.374-5.522,4.674c-0.585,0.877-1.385,0.63-2.599,0.253c-0.121-0.039-0.249-0.079-0.381-0.119"
@@ -386,7 +404,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 240,
-        PositionY: 230, 
+        PositionY: 230,
+        TemperaturePostitionX: 250,
+        TemperaturePostitionY: 250,
         Name: "Khmelnytskyi", 
         PathCoordinates: "M285.79,153.236"
         + "c-1.287-0.422-4.643-0.073-5.02,0.402c-0.392,0.491-0.671,0.935-0.916,1.326c-0.828,1.318-1.283,2.044-4.308,1.707"
@@ -428,8 +448,10 @@ export const ukraineMainCities: City[] = [
         + "C286.787,153.948,285.911,153.313,285.79,153.236z" 
     },
     { 
-        PositionX: 335,
-        PositionY: 280, 
+        PositionX: 330,
+        PositionY: 270,
+        TemperaturePostitionX: 345,
+        TemperaturePostitionY: 290,
         Name: "Vinnytsia", 
         PathCoordinates: "M292.296,307.688"
         + "c-0.11,0.055-0.174,0.134-0.194,0.235c-0.11,0.563,0.995,1.83,2.165,3.172c1.905,2.181,4.225,4.843,3.512,6.668l0.645-0.149"
@@ -474,8 +496,10 @@ export const ukraineMainCities: City[] = [
         + "c1.54,1.21,2.238,2.301,2.134,3.338C294.773,305.972,293.908,306.883,292.296,307.688z" 
     },
     { 
-        PositionX: 450,
-        PositionY: 260, 
+        PositionX: 490,
+        PositionY: 230,
+        TemperaturePostitionX: 480,
+        TemperaturePostitionY: 255,
         Name: "Cherkasy", 
         PathCoordinates: "M410.042,272.685"
         + "c-0.624,0.357-1.256,0.645-1.813,0.896c-1.201,0.545-2.148,0.975-2.339,1.748c-0.159,0.651,0.218,1.534,1.186,2.781"
@@ -524,7 +548,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 500,
-        PositionY: 310, 
+        PositionY: 305,
+        TemperaturePostitionX: 515,
+        TemperaturePostitionY: 325,
         Name: "Kirovohrad", 
         PathCoordinates: "M564.382,262.912"
         + "c0.049,1.468,0.83,2.935,2.381,4.486c0.224,0.224,0.44,0.438,0.643,0.636c2.507,2.48,3.184,3.149,2.381,7.156"
@@ -576,7 +602,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 490,
-        PositionY: 390, 
+        PositionY: 390,
+        TemperaturePostitionX: 540,
+        TemperaturePostitionY: 410,
         Name: "Mykolayiv", 
         PathCoordinates: "M590.168,412.665"
         + "c-2.609-3.259-3.875-5.66-3.875-7.339c0-1.21,0.136-1.742,0.406-2.803c0.211-0.84,0.506-1.987,0.881-4.064"
@@ -639,8 +667,10 @@ export const ukraineMainCities: City[] = [
         + "c1.634-1.428,2.45-2.146,5.915-3.533c1.736-0.695,2.801-1.161,2.97-1.809C591.151,414.127,590.901,413.58,590.168,412.665z" 
     },
     { 
-        PositionX: 400,
-        PositionY: 410, 
+        PositionX: 415,
+        PositionY: 410,
+        TemperaturePostitionX: 430,
+        TemperaturePostitionY: 430,
         Name: "Odessa", 
         PathCoordinates: "M483.752,463.007L483.752,463.007"
         + "c0.304-2.501,1.197-10.956-0.102-14.728c-0.517-1.497-1.473-2.788-2.401-4.033c-0.969-1.309-1.974-2.66-2.418-4.214"
@@ -726,6 +756,8 @@ export const ukraineMainCities: City[] = [
     { 
         PositionX: 600,
         PositionY: 440,
+        TemperaturePostitionX: 615,
+        TemperaturePostitionY: 460,
         Name: "Kherson", 
         PathCoordinates: "M541.447,497.773l-0.088,0.31l0.653,1.357"
         + "l0.102,1.162l0.224,0.787l0.359,0.361l1.267,0.288l2.52,0.959l3.886,1.197l5.343,1.184l0.959,0.053l0.72-0.273l0.79-1.047"
@@ -794,8 +826,10 @@ export const ukraineMainCities: City[] = [
         + "L541.447,497.773z" 
     },
     { 
-        PositionX: 610,
-        PositionY: 550, 
+        PositionX: 620,
+        PositionY: 550,
+        TemperaturePostitionX: 630,
+        TemperaturePostitionY: 570,
         Name: "Sevastopol", 
         PathCoordinates: "M772.556,552.372l0.394-0.292l0.495-0.154"
         + "l1.149-0.104l0.632,0.033l0.341,0.07l1.322,0.583l0.598,0.066l1.472-0.066l0.977-0.326l0.326-0.408l0.206-0.565l-0.206-2.603"
@@ -869,7 +903,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 690,
-        PositionY: 400, 
+        PositionY: 400,
+        TemperaturePostitionX: 715,
+        TemperaturePostitionY: 420,
         Name: "Zaporizhzhia", 
         PathCoordinates: "M802.294,418.037"
         + "c-0.057-0.645-0.769-1.371-2.313-2.356c-2.768-1.76-3.18-2.485-3.66-3.323c-0.335-0.585-0.682-1.191-1.915-2.249"
@@ -928,8 +964,10 @@ export const ukraineMainCities: City[] = [
         + "C801.733,419.255,802.35,418.679,802.294,418.037z" 
     },
     { 
-        PositionX: 620,
-        PositionY: 310, 
+        PositionX: 650,
+        PositionY: 300,
+        TemperaturePostitionX: 620,
+        TemperaturePostitionY: 325,
         Name: "Dnipropetrovsk", 
         PathCoordinates: "M767.827,354.36"
         + "c0.429-2.136,1.716-3.138,2.658-3.87c1.001-0.779,1.606-1.246,0.783-2.48c-0.661-0.993-1.885-1.547-2.964-2.033"
@@ -991,7 +1029,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 800,
-        PositionY: 320, 
+        PositionY: 320,
+        TemperaturePostitionX: 805,
+        TemperaturePostitionY: 340,
         Name: "Donetsk", 
         PathCoordinates: "M784.322,284.693"
         + "c-0.653,0.343-1.941-0.546-3.301-1.487c-1.077-0.746-2.194-1.516-2.825-1.516c-0.803,0-1.507,0.49-2.193,0.959"
@@ -1044,7 +1084,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 850,
-        PositionY: 230, 
+        PositionY: 240,
+        TemperaturePostitionX: 855,
+        TemperaturePostitionY: 260,
         Name: "Luhansk", 
         PathCoordinates: "M831.145,191.206"
         + "c-1.497,0-3.425,2.354-5.352,2.997c-0.684,0.229-1.149,0.398-1.509,0.445c0.064,0.374,0.119,0.803,0.178,1.263"
@@ -1089,7 +1131,9 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 725,
-        PositionY: 210, 
+        PositionY: 210,
+        TemperaturePostitionX: 735,
+        TemperaturePostitionY: 230,
         Name: "Kharkiv", 
         PathCoordinates: "M695.128,172.083"
         + "c-4.643-0.42-6.793,0.843-9.781,2.977c-1.312,0.938-1.616,1.778-1.86,2.452c-0.308,0.856-0.514,1.422-2.476,1.422"
@@ -1136,9 +1180,11 @@ export const ukraineMainCities: City[] = [
         + "C701.362,171.21,699.204,172.453,695.128,172.083z" 
     },
     { 
-        PositionX: 580,
-        PositionY: 205, 
-        Name: "Poltava", 
+        PositionX: 590,
+        PositionY: 205,
+        TemperaturePostitionX: 600,
+        TemperaturePostitionY: 225,
+        Name: "Poltava",
         PathCoordinates: "M696.407,233.546"
         + "c2.574-0.431,3.77-4.795,3.77-7.613c0-2.76-2.713-4.617-6.752-4.617c-3.737,0-4.742-5.02-5.235-9.931"
         + "c-0.328-3.288-4.742-4.247-9.855-5.356c-1.383-0.302-2.813-0.612-4.202-0.981c-6.216-1.659-5.592-7.797-4.351-12.963"
@@ -1176,8 +1222,10 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 600,
-        PositionY: 120, 
-        Name: "Sumy", 
+        PositionY: 110,
+        TemperaturePostitionX: 600,
+        TemperaturePostitionY: 130,
+        Name: "Sumy",
         PathCoordinates: "M591.488,19.824"
         + "c-1.436,2.333-2.029,3.301-2.22,5.853c-0.024,0.352-0.064,0.73-0.106,1.131c-0.257,2.505-0.61,5.936,1.585,8.866"
         + "c1.241,1.653,1.536,3.261,0.796,4.298c-0.702,0.983-2.158,1.232-3.9,0.669c-0.459-0.149-1.126,0.374-1.495,1.162"
@@ -1219,8 +1267,10 @@ export const ukraineMainCities: City[] = [
     },
     { 
         PositionX: 490,
-        PositionY: 80, 
-        Name: "Chernihiv", 
+        PositionY: 80,
+        TemperaturePostitionX: 495,
+        TemperaturePostitionY: 100,
+        Name: "Chernihiv",
         PathCoordinates: "M532.452,174.887"
         + "c2.474,0.208,3.589-1.01,4.773-2.297c1.283-1.397,2.611-2.841,5.71-2.841c3.066,0,4.219,1.457,5.237,2.742"
         + "c1.012,1.281,1.888,2.387,4.381,1.97c1.214-0.202,2.379-0.332,3.508-0.459c3.703-0.416,6.897-0.771,10.149-3.374"

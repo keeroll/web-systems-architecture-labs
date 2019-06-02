@@ -1,3 +1,19 @@
+@boilingHotRegionColor: #B30000;
+@hotRegionColor: #FF3333;
+@warmRegionColor: #FFD11A;
+@aboveZeroRegionColor: #FFFF66;
+@zeroRegionColor: #BFBFBF;
+@belowZeroRegionColor: #99CCFF;
+@coldRegionColor: #4DA6FF;
+@strongFrostRegionColor: #1A75FF;
+@freezingColdRegionColor: #0040FF;
+@freezingToDeathRegionColor: #0000E6;
+
+@hoverRegionGreyColor: #CCCCCC;
+
+@whiteColor: #FFFFFF;
+@violetColor: #6600FF;
+
 * {
 	margin: 0 auto;
 	padding: 0;
@@ -10,37 +26,55 @@
 	display: block;
 }
 
-path { //change to class
-	stroke: #fff;
-}
-/*
-    make new classes which will be applied to path tag when
-    temperature will be in some range or by status
+.map-region {
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: @whiteColor;
+    fill: @violetColor;
+
+    &.boiling-hot {
+        fill: @boilingHotRegionColor;
+    }
     
-    Temperature:
-    > 30+       red
-    +30 - +20   yellow to red
-    +20 - +10   yellow
-    +10 - 0     light yellow
-    0           grey
-    0 - -5      light blue
-    -5 - -10    blue
-    -10 - -20   dark blue
-    -20 - -30   more dark blue
-    > -30       very dark blue    lol
+    &.hot {
+        fill: @hotRegionColor;
+    }
+    
+    &.warm {
+        fill: @warmRegionColor;
+    }
+    
+    &.above-zero {
+        fill: @aboveZeroRegionColor;
+    }
+    
+    &.zero {
+        fill: @zeroRegionColor;
+    }
+    
+    &.below-zero {
+        fill: @belowZeroRegionColor;
+    }
+    
+    &.cold {
+        fill: @coldRegionColor;
+    }
+    
+    &.strong-frost {
+        fill: @strongFrostRegionColor;
+    }
+    
+    &.freezing-cold {
+        fill: @freezingColdRegionColor;
+    }
+    
+    &.freezing-to-death {
+        fill: @freezingToDeathRegionColor;
+    }
+}
 
-    Statuses:
-    Clear sky - nothing or sun animation/icon
-
-    Other statuses need to find in openweatherapi, but raw info is next:
-    Any rain - rain animation/icon
-    Clouds - clouds animation/icon
-    Strong wind - wind animation/icon
-    Storm - storm animation/icon
-*/
-
-path:hover {
-	fill: #E6C322; 
+.map-region:hover {
+    fill: @hoverRegionGreyColor;
 }
 
 .forecast-map-label {
@@ -50,5 +84,20 @@ path:hover {
     position: absolute;
     text-decoration: none;
     cursor: pointer;
-    overflow-wrap: break-word;
 }
+
+/*
+    To make better descriptions, animations and etc.,
+    use weather conditions from here:
+    https://openweathermap.org/weather-conditions
+
+    Also Included some gifs to assets, but need to figure out the way to
+    use them with path tag or cursor
+
+    1) contains clouds -- clouds anim
+    2) contains rain -- rain anim
+    3) clear sky -- sun animation
+    4) mist -- nothing
+    5) thunderstorm -- thunderstorm anim
+    6) snow -- snow anim
+*/

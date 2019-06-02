@@ -1,16 +1,19 @@
 <div class="map-container">
-	<span class="forecast-map-label"
-		  *ngFor="let item of forecastList"
-		  [attr.id]="item.MapLabel" 
-		  [attr.title]="item.Clouds"
-		  [style.top]="item.PositionY"
-		  [style.left]="item.PositionX">
-		{{ item.City }}
-		{{ item.CurrentTemperature }} &#8451;
-	</span>
+	<div *ngFor="let item of forecastList">
+		<span class="forecast-map-label"
+			  [attr.title]="item.WeatherStatus"
+			  [style.top]="item.PositionY"
+			  [style.left]="item.PositionX">
+			{{ item.City }}
+	  </span>
+	  <span class="forecast-map-label" 
+	  		[style.top]="item.TemperaturePostitionY"
+			[style.left]="item.TemperaturePostitionX">
+			{{ item.CurrentTemperature }} &#8451;
+	  </span>
+	</div>
 	<div class="ukraine-map-container">
 		<svg version="1.1" 
-			 id="Layer_1" 
 			 xmlns="http://www.w3.org/2000/svg" 
 			 xmlns:xlink="http://www.w3.org/1999/xlink"
 			 x="0px" 
@@ -20,12 +23,10 @@
 			 viewBox="0 0 960 650" 
 			 enable-background="new 0 0 960 650"
 			 xml:space="preserve">
-			<g *ngFor="let item of ukraineCitiesList">
-				<path [attr.id]=item.Name 
-					  fill="#22C3F2"
-					  stroke="#94A2D2" 
-					  stroke-width="2" 
-					  stroke-miterlimit="10"
+			<g *ngFor="let item of forecastList">
+				<path class="map-region"
+					  [ngClass]="applyCurrentRegionStyle(item.CurrentTemperature)"
+					  [attr.id]=item.Name
 					  [attr.d]="item.PathCoordinates" />
 			</g>
 		</svg>

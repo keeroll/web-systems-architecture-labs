@@ -1,6 +1,8 @@
 export class City {
-    PositionX: Number;
-    PositionY: Number;
+    PositionX: number;
+    PositionY: number;
+    TemperaturePostitionX: number;
+    TemperaturePostitionY: number;
     Name: string;
     PathCoordinates: string;
 }
