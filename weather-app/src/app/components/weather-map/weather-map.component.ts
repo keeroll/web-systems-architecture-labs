@@ -20,6 +20,10 @@ export class WeatherMapComponent implements OnInit {
 
   }
 
+  get ukraineCitiesList(): City[] {
+    return this._citiesMock;
+  }
+
   get forecastList(): Forecast[] {
     return this._forecastList;
   }
@@ -38,12 +42,11 @@ export class WeatherMapComponent implements OnInit {
     this._citiesMock.forEach(async item => {
       let forecast = await this._weatherService.getWeatherByCityAsync(item.Name);
       let forecastModel = new Forecast();
-      forecastModel.City = forecast.getElementsByTagName("city")[0].getAttribute("name");
+      forecastModel.City = forecast.getElementsByTagName("city")[0].getAttribute("name") + "\n";
       forecastModel.CurrentTemperature = forecast.getElementsByTagName("temperature")[0].getAttribute("value");
       forecastModel.Clouds = forecast.getElementsByTagName("clouds")[0].getAttribute("name");
-      forecastModel.PositionX = item.PositionX;
-      forecastModel.PositionY = item.PositionY;
-      forecastModel.PathCoordinates = item.PathCoordinates;
+      forecastModel.PositionX = item.PositionX + "px";
+      forecastModel.PositionY = item.PositionY + "px";
 
       forecastList.push(forecastModel);
     });

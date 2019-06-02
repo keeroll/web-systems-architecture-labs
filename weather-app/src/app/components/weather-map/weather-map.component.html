@@ -1,46 +1,33 @@
 <div class="map-container">
-	<div class="map-wrapper">
-
-		<svg version="1.1" 
-			id="Layer_1" 
-			xmlns="http://www.w3.org/2000/svg" 
-			xmlns:xlink="http://www.w3.org/1999/xlink"
-			x="0px" 
-			y="0px" 
-			width="960px" 
-			height="650px" 
-			viewBox="0 0 960 650" 
-			enable-background="new 0 0 960 650"
-			xml:space="preserve" >
-
-			
-							
-<g *ngFor="let item of forecastList">
-		<path 		
-		[attr.id]= item.City
-		fill="#F4F2F4" 
-		stroke="#94A2D2" 
-		stroke-width="2" 
-		stroke-miterlimit="10" 
-		[attr.d]="item.PathCoordinates"/> 
-			<!-- <a class="map-label various fancybox" 
-			[attr.id]="item.MapLabel" 
-			[attr.title]="item.Clouds"> -->
-				<!-- <span class="marker"></span>
-				<span class="forecast-info-label"> -->
-					<!-- item.City
-					item.CurrentTemperature &#8451; -->
-				<!-- </span> -->
-			<!-- </a> -->
-
-	<text [attr.x]="item.PositionX" 
-			[attr.y]="item.PositionY" 
-			style="overflow:visible">
+	<span class="forecast-map-label"
+		  *ngFor="let item of forecastList"
+		  [attr.id]="item.MapLabel" 
+		  [attr.title]="item.Clouds"
+		  [style.top]="item.PositionY"
+		  [style.left]="item.PositionX">
 		{{ item.City }}
 		{{ item.CurrentTemperature }} &#8451;
-		</text>
-</g>
-
+	</span>
+	<div class="ukraine-map-container">
+		<svg version="1.1" 
+			 id="Layer_1" 
+			 xmlns="http://www.w3.org/2000/svg" 
+			 xmlns:xlink="http://www.w3.org/1999/xlink"
+			 x="0px" 
+			 y="0px" 
+			 width="960px" 
+			 height="650px" 
+			 viewBox="0 0 960 650" 
+			 enable-background="new 0 0 960 650"
+			 xml:space="preserve">
+			<g *ngFor="let item of ukraineCitiesList">
+				<path [attr.id]=item.Name 
+					  fill="#22C3F2"
+					  stroke="#94A2D2" 
+					  stroke-width="2" 
+					  stroke-miterlimit="10"
+					  [attr.d]="item.PathCoordinates" />
+			</g>
 		</svg>
 	</div>
 </div>
