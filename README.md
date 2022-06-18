@@ -1,2 +1,2 @@
-# University tasks repository (web development course)
-### Here is a weather web app which was implemented to pass university course.
+# Web devevelopment repository
+Some web development tasks for one of my university courses
